@@ -1,0 +1,66 @@
+<!-- 
+    Exercício
+    Construir um formulário para cadastrar clientes no sistema
+    Esse formulário, precisa conter os seguintes campos:
+    - Nome completo
+    - Email
+    - Confirmação do email
+    - Senha
+    - CEP
+    - Data de nascimento
+
+    Algumas validações são necessárias
+    1 - Email e Confirmação do Email precisam ser iguais
+    2 - Senha tem que ter no mínimo 12 caracteres e 1 Caracter maíusculo
+    3 - Data de nascimento precisa estar no formato DD/MM/YYYY
+
+    Validação da senha vai ser realizada enquanto o usuário digita
+    Validação do email e da data, será realiza quando o usuário clica em Cadastrar
+
+    Se a validação falhar (1, 2 ou 3 estiverem com ERRO), o formulário não poderá ser enviado -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Cadastro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <form class='registration' action="#" method="POST">
+        <div class="dados">
+            <label for="name">Nome completo:</label> <br>
+            <input id="name" type="text" name="name">
+            <br>
+
+            <label for="email">Email:</label> <br>
+            <input id="email" name="email" type="email">
+            <br>
+
+            <label for="email-confirm">Confirmação de Email:</label> <br>
+            <input id="email-confirm" name="email-confirm" type="email" >
+            <br>
+
+            <label for="password">Senha:</label> <br>
+            <input id="password" name="password" type="password" >
+            <span id="password-status"></span>
+            <br>
+
+            <label for="text">CEP:</label> <br>
+            <input id="cep" name="cep" type="text" >
+            <br>
+
+            <label for="data">Data de nascimento:</label> <br>
+            <input id="data" name="data" type="text">
+            <br>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+    <script src="javascript/index.js"></script>
+</body>
+</html>
